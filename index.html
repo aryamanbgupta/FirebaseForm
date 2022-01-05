@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>LiveConnect Form</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class= "brand"><span>Krenai</span> LiveConnect</h1>
+        <div class="wrapper">
+            <div class="company-info">
+                <h3>Krenai</h3>
+                <ul>
+                    <li>Landmark, Cyberpark, Sector-67<br>
+                        Gurugram - 122018</li>
+                    <li>(+91) 88 2627 0586</li>
+                    <li>compose@krenai.com</li>
+                </ul>
+            </div>
+            <div class ="registration">
+                <h3>Register here</h3>
+                <div class="alert">You have been registered!</div>
+                <form id="registrationForm">
+                    <p>
+                        <label>First Name</label>
+                        <input type="text" name="firstName" id="firstName">
+                    </p>
+                    <p>
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" id="lastName">
+                    </p>
+                    <p>
+                        <label>Email Address</label>
+                        <input type="email" name="email" id ="email" required>
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="text" name="number" id="number">
+                    </p>
+                    <p>
+                        <label>Password</label>
+                        <input type="password" name="password" id="password">
+                    </p>
+                    <p class="full">
+                        <button type="submit">Submit</button>
+                    </p>
+                    <p class ="full">
+                        <button>Login</button>
+                    </p>
+                </form>
+            </div>
+          
+        </div>
+    </div>
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4><br />
+          <form id="login-form">
+            <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Your password</label>
+            </div>
+            <button>Login</button>
+          </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCwPjTMloohbaQnNn8-EcA-M3NBqQ-Isys",
+            authDomain: "fir-form-ef160.firebaseapp.com",
+            databaseURL: "https://fir-form-ef160-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "fir-form-ef160",
+            storageBucket: "fir-form-ef160.appspot.com",
+            messagingSenderId: "1083873191297",
+            appId: "1:1083873191297:web:22ceff31fbe49829613480"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth= firebase.auth();
+        const db = firebase.database();
+
+    </script>
+    
+    <script src="main.js"></script>
+</body>
+</html>
